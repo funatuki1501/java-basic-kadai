@@ -1,0 +1,26 @@
+package text.kadai_15;
+
+public class Car_chapter15 {
+    private int gear = 1;
+    private int speed = 10;
+
+    public void changeGear(int afterGear) {
+        int beforeGear = gear; // 変更前を保存
+        gear = afterGear;
+
+        switch (afterGear) {
+            case 1 -> speed = 10;
+            case 2 -> speed = 20;
+            case 3 -> speed = 30;
+            case 4 -> speed = 40;
+            case 5 -> speed = 50;
+            default -> speed = 10;
+        }
+
+        System.out.println("ギア" + beforeGear + "から" + gear + "に切り替えました");
+    }
+
+    public void run() {
+        System.out.println("速度は時速" + speed + "kmです");
+    }
+}
